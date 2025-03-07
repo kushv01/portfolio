@@ -57,7 +57,7 @@ const About = () => {
   return (
     <div className="max-w-6xl mx-auto space-y-16">
       <section>
-        <h1 className="page-title">About Me.</h1>
+        <h1 className="page-title">About Me<span className="text-[#ff4d00]">.</span></h1>
         <div className="glass-container p-8 rounded-xl">
           <p className="text-lg text-white/80 leading-relaxed">
             I'm a Computer Science sophomore at NJIT with expected graduation December 2026, and a passion for building scalable solutions 
@@ -68,7 +68,7 @@ const About = () => {
       </section>
 
       <section className="space-y-8">
-        <h2 className="section-title">Education.</h2>
+        <h2 className="section-title text-[#ff4d00] italic">Education</h2>
         <div className="space-y-6">
           {education.map((edu, index) => (
             <motion.div
@@ -111,7 +111,7 @@ const About = () => {
       </section>
 
       <section className="space-y-8">
-        <h2 className="section-title">Awards & Recognition.</h2>
+        <h2 className="section-title text-[#ff4d00] italic">Awards & Recognition</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {awards.map((award, index) => (
             <motion.div

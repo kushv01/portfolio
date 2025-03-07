@@ -18,13 +18,13 @@ const Navbar = () => {
   return (
     <nav className="sticky top-4 left-0 right-0 z-50">
       <div className="mx-auto px-4">
-        <div className="bg-black/90 rounded-3xl border border-white transition-all">
+        <div className="bg-[#ff4d00]/60 rounded-3xl border border-[#ff4d00] transition-all">
           <div className="flex items-center justify-between h-12 px-6">
             {/* Logo Container - Extreme Left */}
             <div className="flex-shrink-0">
               <Link to="/" className="block">
                 <img 
-                  src="/logo.png" 
+                  src="/assets/logo.png" 
                   alt="KV Logo" 
                   className="h-14 w-auto"
                 />
@@ -37,7 +37,7 @@ const Navbar = () => {
                 <Link
                   key={path}
                   to={path}
-                  className="relative group text-sm font-medium text-white/70 hover:text-white transition-colors"
+                  className="relative group text-sm font-medium text-white hover:text-white transition-colors"
                 >
                   {label}
                   {location.pathname === path && (

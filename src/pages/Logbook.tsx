@@ -266,60 +266,63 @@ function Logbook() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="page-title">Logbook.</h1>
-      <p className="text-white/70 mb-12 text-lg">
+    <div className="">
+      <h1 className="page-title">Logbook<span className="text-[#ff4d00]">.</span></h1>
+      <p className="text-[#ff4d00] italic mb-12 text-lg">
         A collection of technical notes, research findings, and development insights.
       </p>
-
-      <div className="space-y-8">
-        {logs.map((log, index) => (
-          <motion.article
-            key={index}
-            className="glass-container p-6 rounded-xl cursor-pointer"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            onClick={() => setSelectedLog(selectedLog === index ? null : index)}
-          >
-            <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-              <div className="space-y-1">
-                <h2 className="text-xl font-semibold text-white">{log.title}</h2>
-                <p className="text-white/50 text-sm">{log.category}</p>
+      <div className="">
+        <div className="space-y-8 grid grid-cols-1 gap-4">
+          {logs.map((log, index) => (
+            <motion.article
+              key={index}
+              className="glass-container p-6 rounded-xl cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              onClick={() => setSelectedLog(selectedLog === index ? null : index)}
+            >
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <div className="space-y-1">
+                  <h2 className="text-xl font-semibold text-white">{log.title}</h2>
+                  <p className="text-white/50 text-sm">{log.category}</p>
+                </div>
+                <time className="text-white/40 text-sm">{log.date}</time>
               </div>
-              <time className="text-white/40 text-sm">{log.date}</time>
-            </div>
-            
-            <p className="text-white/70 mb-4 leading-relaxed">
-              {log.description}
-            </p>
 
-            {selectedLog === index && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="mt-4 pt-4 border-t border-white/10"
-              >
-                <pre className="text-white/70 whitespace-pre-wrap font-mono text-sm leading-relaxed">
-                  {log.notes}
-                </pre>
-              </motion.div>
-            )}
+              <p className="text-white/70 mb-4 leading-relaxed">
+                {log.description}
+              </p>
 
-            <div className="flex flex-wrap gap-2 mt-4">
-              {log.tags.map((tag, i) => (
-                <span 
-                  key={i}
-                  className="px-2 py-1 rounded-full bg-white/5 text-white/60 text-sm"
+              {selectedLog === index && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-4 pt-4 border-t border-white/10"
                 >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </motion.article>
-        ))}
+                  <pre className="text-white/70 whitespace-pre-wrap font-mono text-sm leading-relaxed">
+                    {log.notes}
+                  </pre>
+                </motion.div>
+              )}
+
+              <div className="flex flex-wrap gap-2 mt-4">
+                {log.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-2 py-1 rounded-full bg-white/5 text-white/60 text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
+
+
     </div>
   );
 }

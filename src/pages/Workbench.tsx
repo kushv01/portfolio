@@ -147,10 +147,10 @@ function Workbench() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto space-y-16 pb-16">
+    <div className=" mx-auto space-y-16 pb-16">
       {/* Research Section */}
       <section>
-        <h1 className="page-title">Research.</h1>
+        <h1 className="page-title">Research<span className="text-[#ff4d00]">.</span></h1>
         <motion.div
           className="glass-container p-6 rounded-xl"
           initial={{ opacity: 0, y: 20 }}
@@ -171,7 +171,7 @@ function Workbench() {
 
       {/* Work Experience Section */}
       <section>
-        <h1 className="page-title">Work Experience.</h1>
+        <h1 className="page-title">Work Experience<span className="text-[#ff4d00]">.</span></h1>
         <div className="space-y-6">
           {workExperience.map((work, index) => (
             <motion.div
@@ -203,7 +203,7 @@ function Workbench() {
 
       {/* Projects Section */}
       <section>
-        <h2 className="section-title">Projects.</h2>
+        <h2 className="section-title text-[#ff4d00] italic">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div

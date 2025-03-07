@@ -34,8 +34,8 @@ function Contact() {
 
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="page-title">Get in Touch.</h1>
+    <div className=" mx-auto">
+      <h1 className="page-title">Get in Touch<span className="text-[#ff4d00]">.</span></h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Contact Information */}
@@ -46,7 +46,7 @@ function Contact() {
           className="space-y-8"
         >
           <div className="prose dark:prose-invert">
-            <p className="text-lg text-white/80">
+            <p className="text-lg text-[#ff4d00] italic">
               I'm always interested in hearing about new opportunities, 
               collaborations, and innovative projects in quantitative finance, 
               full-stack development, or machine learning.

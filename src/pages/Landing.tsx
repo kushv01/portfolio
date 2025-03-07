@@ -54,7 +54,7 @@ const Landing = () => {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-6xl font-bold mb-4 text-center page-title">
-                Hi, I'm Kushagra.
+                Hi, I'm Kushagra<span className="text-[#ff4d00]">.</span>
               </h1>
               <h1 className="text-3xl font-thin mb-6 text-center page-title">
                 Decoding Markets, Engineering Solutions.
@@ -64,13 +64,13 @@ const Landing = () => {
 
           {/* Profile Image */}
           <motion.div
-            className="md:w-1/2 aspect-square max-w-[300px] rounded-2xl overflow-hidden relative group"
+            className="md:w-1/2 aspect-square max-w-[300px] rounded-2xl overflow-hidden relative group bg-[#ff4d00]/50 border border-white"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <img
-              src="/headshot2.PNG"
+              src="/assets/headshot.png"
               alt="Kushagra's Profile"
               className="w-full h-full object-cover rounded-2xl border border-[#2563eb]/10 hover:border-[#2563eb]/30 transition-all duration-300"
             />
@@ -80,7 +80,7 @@ const Landing = () => {
         {/* Centered Resume Button */}
         <div className="flex justify-center mb-16">
           <motion.a
-            href="/kushagraVermaResume.pdf"
+            href="/assets/kushagraVermaResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="minimal-button px-6 py-3 rounded-lg font-medium text-[#ff4d00] border-[#ff4d00] border-2 relative overflow-hidden hover:bg-[#ff4d00]/10 transition-all duration-300"
@@ -139,7 +139,7 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
-          <h3 className="text-white/80 text-center font-bold mb-6 text-lg">Stack.</h3>
+          <h3 className="text-[#ff4d00] text-center font-bold mb-6 text-2xl italic">Stack</h3>
           <div className="grid grid-col-1 gap-6">
             {techStack.map((category, index) => (
               <div key={index} className="text-center">

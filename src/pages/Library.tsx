@@ -222,8 +222,8 @@ const Library: React.FC = () => {
   }, [selectedTag]);
 
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="page-title text-5xl mb-8">Library.</h1>
+    <div className="min-h-screen ">
+      <h1 className="page-title text-5xl mb-8">Library<span className="text-[#ff4d00]">.</span></h1>
       
       {/* Filter Section */}
       <div className="mb-8">
