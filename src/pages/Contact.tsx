@@ -9,18 +9,7 @@ function Contact() {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Here you would typically handle the form submission
-    // For now, we'll simulate a success response
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setSubmitStatus('success');
-    setIsSubmitting(false);
-  };
 
   const contactInfo = [
     {
@@ -43,18 +32,6 @@ function Contact() {
     }
   ];
 
-  const socialLinks = [
-    {
-      name: "GitHub",
-      url: "https://github.com/yourusername",
-      icon: "github.svg"
-    },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/your-profile",
-      icon: "linkedin.svg"
-    }
-  ];
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -109,7 +86,7 @@ function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form  className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-white/60 text-sm mb-2">
                 Name
@@ -174,15 +151,7 @@ function Contact() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-orange-500/10 rounded-lg"></div>
             </button>
 
-            {submitStatus === 'success' && (
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-green-400 text-center"
-              >
-                Message sent successfully!
-              </motion.p>
-            )}
+
           </form>
         </motion.div>
       </div>

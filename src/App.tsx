@@ -8,7 +8,6 @@ import Logbook from './pages/Logbook';
 import Library from './pages/Library';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-import LogoGenerator from './components/LogoGenerator';
 import './App.css';
 
 function App() {
@@ -85,7 +84,6 @@ function App() {
                       <Contact />
                     </motion.div>
                   } />
-                  <Route path="/logo" element={<LogoGenerator />} />
                 </Routes>
               </AnimatePresence>
             </div>

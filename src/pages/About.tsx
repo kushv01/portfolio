@@ -1,19 +1,5 @@
 import { motion } from 'framer-motion';
-import { TimelineItem } from '../types';
 
-const timelineData: TimelineItem[] = [
-  {
-    date: "2023",
-    title: "Founded Tech Startup",
-    description: "Led development of innovative quant trading solutions"
-  },
-  {
-    date: "2022",
-    title: "Published Research Paper",
-    description: "Machine learning applications in quantitative finance"
-  },
-  // Add more timeline items as needed
-];
 
 const About = () => {
   const education = [
