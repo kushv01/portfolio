@@ -2,6 +2,7 @@
   "name": "kushagra-portfolio",
   "private": true,
   "version": "0.0.1",
+  "homepage": "https://kushv01.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
