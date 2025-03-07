@@ -6,5 +6,8 @@ export default defineConfig({
   base: '/portfolio/' ,
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+  },
+  build: {
+    outDir: 'build'
   }
 }) 
